@@ -100,17 +100,22 @@ clk_div #(
 	.out(clk_10sec)
 );
 
-wire [7:0] color_byte;
+wire [7:0] color_byte_raw;
+reg [7:0] color_byte;
 
 genvar i;
 generate
 	for (i = 0; i < 8; i=i+1) begin: rngBlockGen
 	lfsr_rng #(.SEED(64'h1CA1_E070_10B4_0AD5 >> i)) UrngCol_gen(
 		.CLK(clk_sec),
-		.RND_BIT(color_byte[i])
+		.RND_BIT(color_byte_raw[i])
 		);
 	end
 endgenerate
+
+always @(posedge Vsync) begin
+	color_byte <= color_byte_raw;
+end
 
 ////////////////////////////////////////////////////////////
 
