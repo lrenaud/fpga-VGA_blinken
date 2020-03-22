@@ -7,6 +7,7 @@
 
 
 `ifndef __VGA_TIMES_SET_H
+	`define VGA_CNTR_BIT_WIDTH	13
 
     `ifdef vga_480p
         `define __VGA_TIMES_SET_H
@@ -99,13 +100,31 @@
     `endif // 480p
 
     `ifndef __VGA_TIMES_SET_H
-        // Default 1080p
-        `define VGA_PX_CLK      182_500_000
+        // Default 1080p @ 59Hz
+        `define VGA_PX_CLK      178_200_000
         `define VGA_RES_H       1920
         `define VGA_RES_V       1080
         `define VGA_FPORCH_H    32
         `define VGA_FPORCH_V    22
-        `define VGA_SYNC_H      696
+        `define VGA_SYNC_H      672
+        `define VGA_SYNC_H_POL  0
+        `define VGA_SYNC_V      11
+        `define VGA_SYNC_V_POL  0
+        `define VGA_BPORCH_H    32
+        `define VGA_BPORCH_V    22
+
+		`define ISE_DCM_MULTIPLY		25
+		`define ISE_DCM_DIVIDE			7
+    `endif
+
+	/*`ifndef __VGA_TIMES_SET_H
+        // Default 1080p @ 60Hz
+        `define VGA_PX_CLK      183_970_000
+        `define VGA_RES_H       1920
+        `define VGA_RES_V       1080
+        `define VGA_FPORCH_H    32
+        `define VGA_FPORCH_V    22
+        `define VGA_SYNC_H      688
         `define VGA_SYNC_H_POL  0
         `define VGA_SYNC_V      11
         `define VGA_SYNC_V_POL  0
@@ -114,13 +133,13 @@
 
 		`define ISE_DCM_MULTIPLY		11
 		`define ISE_DCM_DIVIDE			3
-    `endif
+    `endif*/
 
     `define VGA_MAX_H   (`VGA_SYNC_H + `VGA_FPORCH_H + `VGA_RES_H + `VGA_BPORCH_H)
     `define VGA_MAX_V   (`VGA_SYNC_V + `VGA_FPORCH_V + `VGA_RES_V + `VGA_BPORCH_V)
     `define VGA_SYNC_START_H   (`VGA_RES_H + `VGA_BPORCH_H)
     `define VGA_SYNC_START_V   (`VGA_RES_V + `VGA_BPORCH_V)
-    `define VGA_SYNC_STOP_H   (`VGA_SYNC_H + `VGA_RES_H + `VGA_BPORCH_H)
-    `define VGA_SYNC_STOP_V   (`VGA_SYNC_V + `VGA_RES_V + `VGA_BPORCH_V)
+    `define VGA_SYNC_STOP_H   (`VGA_SYNC_H + `VGA_SYNC_START_H)
+    `define VGA_SYNC_STOP_V   (`VGA_SYNC_V + `VGA_SYNC_START_V)
 
 `endif
