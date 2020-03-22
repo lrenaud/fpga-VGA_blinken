@@ -1,0 +1,66 @@
+# Ignore development environment setup data.
+.vscode
+
+###########################################################
+##### Things you might want in your repo, but I don't! ####
+###########################################################
+# Ignore programing output binaries.
+*.bit
+*.mcs
+
+# Impact programing command
+ise_impact.cmd
+
+# Ignore all automatically generated reports
+*.html
+*.gise
+*_xdb
+*.xst
+iseconfig
+ipcore_dir
+_xmsgs
+_ngo
+*.log
+xst
+
+## Minimize IMPACT configuration files
+#####
+# xilinx usage statistics files (html)
+# something that refines an xst?
+*.xwbt
+./output.txt
+webtalk*
+*.ncd
+
+# Non-clean build files
+*.bgn
+*.bld
+*.cmd_log
+*.drc
+*.lso
+*.ngc
+*.ngd
+*.ngr
+*.pad
+*.par
+*.pcf
+*.prj
+*.ptwx
+*.stx
+*.syr
+*.twr
+*.twx
+*.unroutes
+*.ut
+*.xpi
+*_map.map
+*_map.mrp
+*_map.ngm
+*_map.xrpt
+*_ngdbuild.xrpt
+*_pad.csv
+*_pad.txt
+*_par.xrpt
+*_summary.xml
+*_usage.xml
+*_xst.xrpt
