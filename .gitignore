@@ -8,8 +8,15 @@
 *.bit
 *.mcs
 
+*.ufp
+*.sig
+*.prm
+*.cfi
+output.txt
+
 # Impact programing command
 ise_impact.cmd
+_impact.cmd
 
 # Ignore all automatically generated reports
 *.html
@@ -22,10 +29,7 @@ _xmsgs
 _ngo
 *.log
 xst
-<<<<<<< HEAD
 tmp
-=======
->>>>>>> 25ce4202c5de9825c5f9501364dce0f10fca449b
 
 ## Minimize IMPACT configuration files
 #####
@@ -68,8 +72,6 @@ webtalk*
 *_summary.xml
 *_usage.xml
 *_xst.xrpt
-<<<<<<< HEAD
 *.cgc
 *.xdl
-=======
->>>>>>> 25ce4202c5de9825c5f9501364dce0f10fca449b
+*.xsl
