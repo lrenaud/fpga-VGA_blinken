@@ -22,14 +22,14 @@
 `include "lib/vga_timing.v"
 
 module vga_sync(
-	input PIXEL_CLK,
-	output [12:0] locX,
-	output [12:0] locY,
-	output in_image,
-	output in_image_x,
-	output in_image_y,
-	output sync_h,
-	output sync_v);
+	input wire PIXEL_CLK,
+	output wire [12:0] locX,
+	output wire [12:0] locY,
+	output wire in_image,
+	output wire in_image_x,
+	output wire in_image_y,
+	output wire sync_h,
+	output wire sync_v);
 
 reg [(`VGA_CNTR_BIT_WIDTH-1):0] cntX_px;
 reg [(`VGA_CNTR_BIT_WIDTH-1):0] cntY_px;
@@ -44,6 +44,12 @@ wire vga_hot_y;
 assign in_image = vga_hot;
 assign in_image_y = vga_hot_y;
 assign in_image_x = vga_hot_x;
+
+initial
+begin
+	cntX_px <= 0;
+	cntY_px <= 0;
+end
 
 always @(posedge PIXEL_CLK)
 begin
