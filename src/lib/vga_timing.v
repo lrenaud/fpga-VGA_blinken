@@ -17,9 +17,9 @@
         `define VGA_FPORCH_H    32
         `define VGA_FPORCH_V    9
         `define VGA_SYNC_H      112
-        `define VGA_SYNC_H_POL  0
+        `define VGA_SYNC_H_POL  1'b0
         `define VGA_SYNC_V      5
-        `define VGA_SYNC_V_POL  0
+        `define VGA_SYNC_V_POL  1'b0
         `define VGA_BPORCH_H    32
         `define VGA_BPORCH_V    10
 
@@ -34,9 +34,9 @@
 			`define VGA_FPORCH_H    32
 			`define VGA_FPORCH_V    15
 			`define VGA_SYNC_H      280
-			`define VGA_SYNC_H_POL  0
+			`define VGA_SYNC_H_POL  1'b0
 			`define VGA_SYNC_V      7
-			`define VGA_SYNC_V_POL  0
+			`define VGA_SYNC_V_POL  1'b0
 			`define VGA_BPORCH_H    32
 			`define VGA_BPORCH_V    15
 
@@ -51,9 +51,9 @@
 				`define VGA_FPORCH_H    32
 				`define VGA_FPORCH_V    15
 				`define VGA_SYNC_H      320
-				`define VGA_SYNC_H_POL  0
+				`define VGA_SYNC_H_POL  1'b0
 				`define VGA_SYNC_V      8
-				`define VGA_SYNC_V_POL  0
+				`define VGA_SYNC_V_POL  1'b0
 				`define VGA_BPORCH_H    32
 				`define VGA_BPORCH_V    16
 
@@ -68,9 +68,9 @@
 					`define VGA_FPORCH_H    32
 					`define VGA_FPORCH_V    18
 					`define VGA_SYNC_H      456
-					`define VGA_SYNC_H_POL  0
+					`define VGA_SYNC_H_POL  1'b0
 					`define VGA_SYNC_V      9
-					`define VGA_SYNC_V_POL  0
+					`define VGA_SYNC_V_POL  1'b0
 					`define VGA_BPORCH_H    32
 					`define VGA_BPORCH_V    19
 
@@ -85,9 +85,9 @@
 						`define VGA_FPORCH_H    32
 						`define VGA_FPORCH_V    15
 						`define VGA_SYNC_H      280
-						`define VGA_SYNC_H_POL  0
+						`define VGA_SYNC_H_POL  1'b0
 						`define VGA_SYNC_V      7
-						`define VGA_SYNC_V_POL  0
+						`define VGA_SYNC_V_POL  1'b0
 						`define VGA_BPORCH_H    32
 						`define VGA_BPORCH_V    15
 
@@ -107,9 +107,9 @@
         `define VGA_FPORCH_H    32
         `define VGA_FPORCH_V    22
         `define VGA_SYNC_H      672
-        `define VGA_SYNC_H_POL  0
+        `define VGA_SYNC_H_POL  1'b1
         `define VGA_SYNC_V      11
-        `define VGA_SYNC_V_POL  0
+        `define VGA_SYNC_V_POL  1'b1
         `define VGA_BPORCH_H    32
         `define VGA_BPORCH_V    22
 
@@ -125,9 +125,9 @@
         `define VGA_FPORCH_H    32
         `define VGA_FPORCH_V    22
         `define VGA_SYNC_H      688
-        `define VGA_SYNC_H_POL  0
+        `define VGA_SYNC_H_POL  1'b0
         `define VGA_SYNC_V      11
-        `define VGA_SYNC_V_POL  0
+        `define VGA_SYNC_V_POL  1'b0
         `define VGA_BPORCH_H    32
         `define VGA_BPORCH_V    22
 

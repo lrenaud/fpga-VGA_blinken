@@ -14,7 +14,7 @@
 //
 // Dependencies: 
 //
-// Revision: 
+// Revision: ~
 // Revision 0.01 - File Created
 // Additional Comments: 
 //
@@ -24,7 +24,7 @@
 `include "lib/clk_div.v"
 
 
-`define vga_720p
+//`define vga_720p
 //`define vga_480p
 //`define vga_1366x768
 `include "lib/vga_timing.v"

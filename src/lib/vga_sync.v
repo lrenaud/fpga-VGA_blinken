@@ -61,7 +61,9 @@ assign vga_hot_x = (cntX_px < `VGA_RES_H);
 assign vga_hot_y = (cntY_px < `VGA_RES_V);
 assign vga_hot = vga_hot_x & vga_hot_y;
 
-assign sync_h = (cntX_px > `VGA_SYNC_START_H) & (cntX_px < `VGA_SYNC_STOP_H);
-assign sync_v = (cntY_px > `VGA_SYNC_START_V) & (cntY_px < `VGA_SYNC_STOP_V);
+assign sync_h = (`VGA_SYNC_H_POL) ^ 
+	((cntX_px > `VGA_SYNC_START_H) & (cntX_px < `VGA_SYNC_STOP_H));
+assign sync_v = (`VGA_SYNC_V_POL) ^ 
+	((cntY_px > `VGA_SYNC_START_V) & (cntY_px < `VGA_SYNC_STOP_V));
 
 endmodule
