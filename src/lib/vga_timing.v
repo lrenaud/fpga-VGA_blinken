@@ -101,19 +101,19 @@
 
     `ifndef __VGA_TIMES_SET_H
         // Default 1080p @ 59Hz
-        `define VGA_PX_CLK      178_200_000
+        `define VGA_PX_CLK      193_160_000
         `define VGA_RES_H       1920
         `define VGA_RES_V       1080
         `define VGA_FPORCH_H    32
         `define VGA_FPORCH_V    22
-        `define VGA_SYNC_H      672
+        `define VGA_SYNC_H      696
         `define VGA_SYNC_H_POL  1'b0
         `define VGA_SYNC_V      11
         `define VGA_SYNC_V_POL  1'b1
         `define VGA_BPORCH_H    32
         `define VGA_BPORCH_V    22
 
-		`define ISE_DCM_MULTIPLY		25
+		`define ISE_DCM_MULTIPLY		27
 		`define ISE_DCM_DIVIDE			7
     `endif
 

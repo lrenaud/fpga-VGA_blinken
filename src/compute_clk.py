@@ -11,7 +11,7 @@ div_list = div.flatten()
 ratios = (mult/div).flatten()
 
 F_in = 50_000_000
-F_out = 178_200_000
+F_out = 193_160_000
 
 ratio_target = F_out/F_in
 
